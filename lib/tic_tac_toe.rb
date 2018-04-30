@@ -1,7 +1,7 @@
 class TicTacToe
 
-  def initialize(board = nil)
-     @board = board || Array.new(9, " ")
+  def initialize
+     @board = Array.new(9, " ")
    end
 
    WIN_COMBINATIONS = [
@@ -68,6 +68,7 @@ class TicTacToe
   end
 
    def turn
+     display_board
      puts "Please enter 1-9:"
      user_input = gets.strip
      index = input_to_index(user_input)
